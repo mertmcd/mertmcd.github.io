@@ -14,7 +14,7 @@ My portfolio website built using HTML, CSS, and JavaScript. You can check it out
 
 ## Author
 
-👤 **Aras Güngöre**
+👤 **Mert Can Demir**
 
 * LinkedIn: [@mertmcd](https://www.linkedin.com/in/mertmcd)
 * GitHub: [@mertmcd](https://github.com/mertmcd)
