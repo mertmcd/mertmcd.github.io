@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+header {
+    background: #FF6600;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+section {
+    padding: 1rem;
+}
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #f4f4f4;
+}
+a {
+    color: #FF6600;
+    text-decoration: none;
+}
