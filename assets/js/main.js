@@ -141,6 +141,37 @@
       });
     });
 
+    const themeToggle = document.querySelector("#theme-toggle");
+    const backgroundVideo = document.getElementById('backgroundVideo');
+
+    // Check saved theme preference
+    // Check saved theme preference
+const savedTheme = localStorage.getItem("theme") || "light";
+
+if (savedTheme === "dark") {
+  document.body.classList.add("dark-mode");
+  themeToggle.checked = true;
+  backgroundVideo.src = "assets/img/background/bgvideo.mp4"; // Dark mode video
+} else {
+  backgroundVideo.src = "assets/img/background/bgvideo2.mp4"; // Light mode video
+}
+
+themeToggle.addEventListener("change", () => {
+  if (themeToggle.checked) {
+    document.body.classList.add("dark-mode");
+    localStorage.setItem("theme", "dark");
+    backgroundVideo.src = "assets/img/background/bgvideo.mp4"; // Dark mode video
+  } else {
+    document.body.classList.remove("dark-mode");
+    localStorage.setItem("theme", "light");
+    backgroundVideo.src = "assets/img/background/bgvideo2.mp4"; // Light mode video
+  }
+
+  // Reload and play the new video
+  backgroundVideo.load();
+  backgroundVideo.play();
+});
+
   });
 
   // Initiate venobox (lightbox feature used in portofilo)

@@ -10,17 +10,40 @@
 --------------------------------------------------------------*/
 
 :root {
-  --primary-color: #12d640;
+    /* Light Mode Variables */
+    --primary-color: #c80000;
+    --header-color: #1b1b1b;
+    --header-top-color: #fff9ec; /* Header için daha açık ton */
+    --primary-hover-color: #a00000; /* Uyumluluk için aynı bırakıldı */
+    --underline-color: #c80000;
+    --background-color: #ffffff; /* Light mod için beyaz arka plan */
+    --highlight-color: #a00000;
+    --text-color: #212121; /* Koyu metin rengi */
+    --icon-box: #f1f1f1; /* Hafif gri ikon kutuları */
+    --icon-box-hover: #e0e0e0; /* Hover durumu için biraz daha koyu */
+    --contact-box: #cccccc; /* Contact box için daha açık bir gri */
+    --social-links: #c80000;
+    --switcher-color: #fff;
+    --switcher-bg: #f1f1f1;
+
+}
+
+body.dark-mode {
+  --primary-color: #ffc107;
   --header-color: #dee2e6;
   --header-top-color: #1b1b1b;
-  --primary-hover-color: #35e888;
+  --primary-hover-color: #dca500;
   --underline-color: #ffc107;
   --background-color: #212121;
-  --highlight-color: #1c7d32;
+  --highlight-color: #dca500;
   --text-color: #fff;
   --icon-box: #1c1c1c;
   --icon-box-hover: #2f2f2f;
   --contact-box: #444444;
+  --social-links: #665626;
+  --switcher-color: #000;
+  --switcher-bg: #8a6708;
+
 }
 
 body {
@@ -48,7 +71,7 @@ body::before {
 }
 
 a {
-  color: var(--primary-color);
+  color: var(--underline-color);
 }
 
 a:hover {
@@ -122,12 +145,12 @@ svg {
 #header h2 {
   font-size: 24px;
   margin-top: 20px;
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 #header h2 span {
   color: var(--underline-color);
-  border-bottom: 2px solid #1c7d32;
+  border-bottom: 2px solid var(--underline-color);
   padding-bottom: 6px;
 }
 
@@ -146,7 +169,7 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--social-links);
   color: var(--text-color);
   line-height: 1;
   margin-right: 8px;
@@ -220,11 +243,11 @@ svg {
 
 .nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
   visibility: visible;
-  width: 25px;
+  width: 100%;
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: var(--primary-color);
+  color: var(--underline-color);
   text-decoration: none;
 }
 
@@ -349,6 +372,79 @@ svg {
 }
 
 /*--------------------------------------------------------------
+# Theme Switcher
+--------------------------------------------------------------*/
+
+.theme-switch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+}
+
+#theme-toggle {
+  display: none; /* Gizle ana input */
+}
+
+.toggle-label {
+  width: 60px;
+  height: 30px;
+  background-color: var(--switcher-bg);
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  background-color: var(--switcher-color);
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#theme-toggle:checked + .toggle-label::before {
+  transform: translate(30px, -50%); /* Sağ tarafa kaydır */
+}
+
+.toggle-label .sun,
+.toggle-label .moon {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.toggle-label .sun {
+  left: 8px;
+  opacity: 1;
+}
+
+.toggle-label .moon {
+  right: 8px;
+  opacity: 0;
+}
+
+#theme-toggle:checked + .toggle-label .sun {
+  opacity: 0;
+}
+
+#theme-toggle:checked + .toggle-label .moon {
+  opacity: 1;
+}
+
+
+/*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
 section {
@@ -383,14 +479,14 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 14px;
+  font-size: 1.5rem;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
-  margin: 0 0 20px 0;
+  margin: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--header-color);
+  color: var(--underline-color);
   font-family: "Poppins", sans-serif;
 }
 
@@ -526,6 +622,7 @@ section .container {
   padding: 20px;
   background: var(--icon-box);
   transition: ease-in-out 0.3s;
+  border-radius: 8px;
 }
 
 
@@ -701,6 +798,7 @@ section .container {
   padding: 40px 40px;
   transition: all ease-in-out 0.3s;
   margin: 10px;
+  border-radius: 8px;
 }
 
 .services .icon-box .icon {
@@ -729,7 +827,7 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: rgba(255, 255, 255, 0.15);
+  background: rgb(235 201 0 / 15%);
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
@@ -739,21 +837,17 @@ section .container {
   font-weight: 700;
   margin-bottom: 15px;
   font-size: 24px;
+  color: var(--underline-color);
 }
 
 .services .icon-box h4 a {
-  color: var(--text-color);
+  color: var(--underline-color);
 }
 
 .services .icon-box p {
   line-height: 24px;
   font-size: 14px;
   margin-bottom: 0;
-}
-
-.services .icon-box:hover {
-  background: var(--icon-box-hover);
-  border-color: var(--primary-color);
 }
 
 .services .icon-box:hover .icon {
@@ -765,11 +859,7 @@ section .container {
 }
 
 .services .icon-box:hover .icon::before {
-  background: var(--primary-hover-color);
-}
-
-.services .icon-box:hover h4 a, .services .icon-box:hover p {
-  color: var(--primary-color);
+  background: var(--highlight-color);
 }
 
 /*--------------------------------------------------------------

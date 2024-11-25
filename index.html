@@ -15,7 +15,7 @@
 
 
 
-  <link rel="icon" type="image/png" href="assets/img/logo.png"/>
+  <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
@@ -72,15 +72,23 @@
   <!--
   <img class="background-image" src="assets/img/background/tunnel_slowmo.gif" />
   -->
-  <video class="background-image" src="assets/img/background/bgvideo.mp4" muted loop autoplay></video>
+  <video id="backgroundVideo" class="background-image" src="assets/img/background/bgvideo2.mp4" muted loop autoplay></video>
 
 
   <!-- ======= Start Header ======= -->
   
   <header id="header" class="header-tops">
     <div class="container">
+                <!-- Light/Dark Mode Toggle -->
+  <div class="theme-switch">
+    <input type="checkbox" id="theme-toggle" />
+    <label for="theme-toggle" class="toggle-label">
+      <span class="sun">☀️</span>
+      <span class="moon">🌙</span>
+    </label>
+  </div>
       <h1><a href="index.html">Mert Can Demir</a></h1>
-      <h2 style="color:#fff">I am <span class="typing" style="color:#12D640"></span></h2>
+      <h2 style="">I am <span class="typing" ></span></h2>
       <nav class="nav-menu d-none d-lg-block">
         <ul>
           <li class="active"><a href="#header"> <span>Home</span></a></li>
@@ -147,10 +155,10 @@
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="http://www.boun.edu.tr/en_US" target="_blank"><img src="assets/img/education/boun_transparent.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="http://www.boun.edu.tr/en_US" target="_blank" style="color:#12d640">Bogazici University</a><br> </h4>
+            <h4 style="text-align:left;"><a href="http://www.boun.edu.tr/en_US" target="_blank" >Bogazici University</a><br> </h4>
             <h5 style="text-align:left;"><em>Master of Science in Geodesy</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>September 2018 - June 2023 (Not Completed)</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;;"><em>September 2018 - June 2023 (Not Completed)</em></span>
+            <span class="right" style="float:right;;"><em>Istanbul, Turkey</em></span><br><br>
             <h6 style="text-align:left;"><strong>Relevant Coursework:</strong></h6>
             <ul style="columns:1;text-align:left;">
               <li>Satellite Positioning and Navigation Systems</li>
@@ -168,10 +176,10 @@
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="http://www.yildiz.edu.tr/" target="_blank"><img src="assets/img/education/ytu.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="http://www.yildiz.edu.tr/" target="_blank" style="color:#12d640">Yildiz Technical University</a><br> </h4>
+            <h4 style="text-align:left;"><a href="http://www.yildiz.edu.tr/" target="_blank" >Yildiz Technical University</a><br> </h4>
             <h5 style="text-align:left;"><em>Bachelor's Degree in Geomatics Engineering</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>September 2011 - February 2017</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>September 2011 - February 2017</em></span>
+            <span class="right" style="float:right;"><em>Istanbul, Turkey</em></span><br><br>
             <h6 style="text-align:left;"><strong>Relevant Coursework:</strong></h6>
             <ul style="columns:1;text-align:left;">
               <li>Surveying and Measurement Techniques</li>
@@ -188,10 +196,10 @@
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://admal.meb.k12.tr/" target="_blank"><img src="assets/img/education/admal.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="https://admal.meb.k12.tr/" target="_blank" style="color:#12d640">Adnan Menderes Anatolian High School</a><br> </h4>
+            <h4 style="text-align:left;"><a href="https://admal.meb.k12.tr/" target="_blank" >Adnan Menderes Anatolian High School</a><br> </h4>
             <h5 style="text-align:left;"><em>High School Diploma</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>September 2007 - June 2011</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Aydin, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>September 2007 - June 2011</em></span>
+            <span class="right" style="float:right;"><em>Aydin, Turkey</em></span><br><br>
           </div>
         </div>
 
@@ -213,11 +221,11 @@
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://www.decoverse.com/" target="_blank"><img src="assets/img/experience/decoverse.png"
                 class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="https://www.decoverse.com/" target="_blank" style="color:#12d640">Decoverse Eczacibasi</a><br>
+            <h4 style="text-align:left;"><a href="https://www.decoverse.com/" target="_blank" >Decoverse Eczacibasi</a><br>
             </h4>
             <h5 style="text-align:left;"><em>Software Developer</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>June 2023 - November 2024, Full-time</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>June 2023 - November 2024, Full-time</em></span>
+            <span class="right" style="float:right;"><em>Istanbul, Turkey</em></span><br><br>
             <ul style="text-align:left;">
               <li>
                 Actively contributed as a frontend developer to projects in 
@@ -237,11 +245,11 @@
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="http://lumnion.com/" target="_blank"><img src="assets/img/experience/lumnion.jpeg" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="http://lumnion.com/" target="_blank" style="color:#12d640">Lumnion GmbH</a><br>
+            <h4 style="text-align:left;"><a href="http://lumnion.com/" target="_blank" >Lumnion GmbH</a><br>
             </h4>
             <h5 style="text-align:left;"><em>Frontend Developer</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>October 2020 - June 2023, Full-time</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>October 2020 - June 2023, Full-time</em></span>
+            <span class="right" style="float:right;"><em>Istanbul, Turkey</em></span><br><br>
             <ul style="text-align:left;">
               <li>
                 Carried out frontend development and design of Electron JS based cross-platform desktop tools for internationally renowned insurance companies.
@@ -259,10 +267,10 @@
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://www.playablefactory.com/" target="_blank"><img src="assets/img/experience/playable.jpg" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="https://www.playablefactory.com/" target="_blank" style="color:#12d640">Playable Factory</a><br> </h4>
+            <h4 style="text-align:left;"><a href="https://www.playablefactory.com/" target="_blank" >Playable Factory</a><br> </h4>
             <h5 style="text-align:left;"><em>Javascript Game Developer</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>June 2020 - August 2020, Full-time</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>June 2020 - August 2020, Full-time</em></span>
+            <span class="right" style="float:right;"><em>Istanbul, Turkey</em></span><br><br>
             <ul style="text-align:left;">
               <li>
                 Developed 2D and 3D hyper casual games in playable ads format for mobile platforms with Javascript game and physics engine libraries such as; Phaser JS, Three JS and Cannon JS.
@@ -271,10 +279,10 @@
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://www.boun.edu.tr/en_US" target="_blank"><img src="assets/img/education/boun_transparent.png" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="https://www.boun.edu.tr/en_US" target="_blank" style="color:#12d640">Bogazici University</a><br> </h4>
+            <h4 style="text-align:left;"><a href="https://www.boun.edu.tr/en_US" target="_blank" >Bogazici University</a><br> </h4>
             <h5 style="text-align:left;"><em>Student Assistant</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>February 2019 - June 2019</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>February 2019 - June 2019</em></span>
+            <span class="right" style="float:right;"><em>Istanbul, Turkey</em></span><br><br>
             <ul style="text-align:left;">
               <li>
                 Took part in a project where the main objective is to meticulously prepare for The Great Expected Istanbul Earthquake.
@@ -287,10 +295,10 @@
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://www.infotech.com.tr/en" target="_blank"><img src="assets/img/experience/infotech.jpeg" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="https://www.infotech.com.tr/en" target="_blank" style="color:#12d640">Infotech | The Location Intelligence Company</a><br> </h4>
+            <h4 style="text-align:left;"><a href="https://www.infotech.com.tr/en" target="_blank" >Infotech | The Location Intelligence Company</a><br> </h4>
             <h5 style="text-align:left;"><em>GIS Data Assistant Specialist</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>April 2017 - August 2017, Full-time</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>April 2017 - August 2017, Full-time</em></span>
+            <span class="right" style="float:right;"><em>Istanbul, Turkey</em></span><br><br>
             <ul style="text-align:left;">
               <li>
                 Arranging and updating big data, creating a suitable output for the desired format and generating POIs for GIS based maps that customers and companies were utilising.
@@ -299,10 +307,10 @@
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
             <a href="https://www.flypgs.com/" target="_blank"><img src="assets/img/experience/pegasus.jpg" class="img-fluid" style="float:left;margin:0 10px 0 0;" width="90"></a>
-            <h4 style="text-align:left;"><a href="https://www.flypgs.com/" target="_blank" style="color:#12d640">Pegasus Airlines</a><br> </h4>
+            <h4 style="text-align:left;"><a href="https://www.flypgs.com/" target="_blank" >Pegasus Airlines</a><br> </h4>
             <h5 style="text-align:left;"><em>Research and Development Engineering Intern</em></h5>
-            <span class="left" style="float:left;color:#fff;"><em>November 2016 - January 2017, Internship</em></span>
-            <span class="right" style="float:right;color:#fff;"><em>Istanbul, Turkey</em></span><br><br>
+            <span class="left" style="float:left;"><em>November 2016 - January 2017, Internship</em></span>
+            <span class="right" style="float:right;"><em>Istanbul, Turkey</em></span><br><br>
             <ul style="text-align:left;">
               <li>
                 Worked as an engineering intern developing a tool for ArcGIS software using Python to automate Flight Chart process, 
@@ -328,23 +336,23 @@
         <div class="col-lg-12 d-flex flex-column flex-lg-row" data-aos="fade-up">
           <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
             <a href="https://github.com/mertmcd/Words-of-Wonders" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/wordsofwonders.jpg" class="img-fluid" width="200" height="200"></a>
-            <a href="https://github.com/mertmcd/Words-of-Wonders" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>Words Of Wonders Game</strong></h5></a>
-            <p style="padding:0px 2px;color:#fff;">A Phaser.js Game Project.</p>
+            <a href="https://github.com/mertmcd/Words-of-Wonders" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;"><strong>Words Of Wonders Game</strong></h5></a>
+            <p style="padding:0px 2px;">A Phaser.js Game Project.</p>
           </div>
           <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
             <a href="https://github.com/mertmcd/Color-Bump" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/colorbump.png" class="img-fluid" width="200" height="200"></a>
-            <a href="https://github.com/mertmcd/Color-Bump" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>Color Bump Game</strong></h5></a>
-            <p style="padding:0px 2px;color:#fff;">A Three.js Game Project.</p>
+            <a href="https://github.com/mertmcd/Color-Bump" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;"><strong>Color Bump Game</strong></h5></a>
+            <p style="padding:0px 2px;">A Three.js Game Project.</p>
           </div>
           <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
             <a href="https://github.com/mertmcd/AMAZE" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/amaze.png" class="img-fluid" width="200" height="200"></a>
-            <a href="https://github.com/mertmcd/AMAZE" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>Amaze Game</strong></h5></a>
-            <p style="padding:0px 2px;color:#fff;">A Phaser.js Game Project.</p>
+            <a href="https://github.com/mertmcd/AMAZE" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;"><strong>Amaze Game</strong></h5></a>
+            <p style="padding:0px 2px;">A Phaser.js Game Project.</p>
           </div>
           <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100" style="padding:0px 0px;padding-bottom:5px;display:inline-block;">
             <a href="https://github.com/mertmcd/decoverse" target="_blank" rel="noreferrer"><img style="padding:5px 5px;" src="assets/img/projects/decoverse.png" class="img-fluid" width="200" height="200"></a>
-            <a href="https://github.com/mertmcd/decoverse" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;color:#12d640"><strong>E-Commerce App</strong></h5></a>
-            <p style="padding:0px 2px;color:#fff;">A React + Tailwind E-Commerce project.</p>
+            <a href="https://github.com/mertmcd/decoverse" target="_blank" rel="noreferrer"><h5 style="padding:5px 5px;"><strong>E-Commerce App</strong></h5></a>
+            <p style="padding:0px 2px;">A React + Tailwind E-Commerce project.</p>
           </div>
         </div>
       </div>
@@ -363,7 +371,7 @@
       <div class="row">
         <div class="col-lg-12" data-aos="fade-up">
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12d640;">Programming Languages</h4>
+            <h4 style="text-align:left;;">Programming Languages</h4>
             <div style="text-align:left;">
               <figure class="item" style="display:inline-block;">
                 <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg" alt="javascript" width="40" height="40" /> </a>
@@ -397,7 +405,7 @@
             </div>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12d640;">Libraries and Frameworks</h4>
+            <h4 style="text-align:left;;">Libraries and Frameworks</h4>
             <div style="text-align:left;">
               <figure class="item" style="display:inline-block;">
                 <a href="https://reactjs.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/react/react-original-wordmark.svg" alt="reactjs" width="40" height="40" /> </a>
@@ -450,7 +458,7 @@
             </div>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12d640;">Database</h4>
+            <h4 style="text-align:left;;">Database</h4>
             <div style="text-align:left;">
               <figure class="item" style="display:inline-block;">
                 <a href="https://www.mongodb.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/mongodb/mongodb-original-wordmark.svg" alt="mongodb" width="40" height="40" /> </a>
@@ -460,7 +468,7 @@
             </div>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-              <h4 style="text-align:left;color:#12d640;">Technologies</h4>
+              <h4 style="text-align:left;;">Technologies</h4>
                 <div style="text-align:left;">
                   <figure class="item" style="display:inline-block;">
                     <a href="https://git-scm.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/git/git-original-wordmark.svg" alt="git" width="40" height="40" /> </a>
@@ -531,7 +539,7 @@
             </div>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12d640;">CSS</h4>
+            <h4 style="text-align:left;;">CSS</h4>
             <div style="text-align:left;">
               <figure class="item" style="display:inline-block;">
                 <a href="https://getbootstrap.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/bootstrap/bootstrap-plain-wordmark.svg" alt="bootstrap" width="40" height="40" /> </a>
@@ -559,7 +567,7 @@
             </div>
           </div>
           <div class="col-md-12 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
-            <h4 style="text-align:left;color:#12d640;">Design</h4>
+            <h4 style="text-align:left;;">Design</h4>
             <div style="text-align:left;">
               <figure class="item" style="display:inline-block;">
                 <a href="https://www.figma.com" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/figma/figma-original.svg" alt="figma" width="40" height="40" /> </a>
@@ -598,13 +606,13 @@
       <div class="row">
         <div class="col-md-3 mt-4 mt-md-0 icon-box pe-none" data-aos="fade-up" data-aos-delay="100">
           <a href="_blank" target="_blank"><div class="icon pe-none"><i class="icofont-page"></i></div></a>
-          <h4 class="title"><a style="color:#12d640;" href="_blank" target="_blank">Curriculum Vitae</a></h4>
-          <p class="description" style="color:#fff;">The above link contains my CV. Also, you can check out the code for this CV <a href="https://github.com/mertmcd/mertmcd.github.io" target="_blank">here</a>.</p>
+          <h4 class="title"><a style="" href="_blank" target="_blank">Curriculum Vitae</a></h4>
+          <p class="description" style="">The above link contains my CV. Also, you can check out the code for this CV <a href="https://github.com/mertmcd/mertmcd.github.io" target="_blank">here</a>.</p>
         </div>
         <div class="col-md-3 mt-4 mt-md-0 icon-box" data-aos="fade-up" data-aos-delay="100">
           <a href="https://resume.github.io/?mertmcd" target="_blank"><div class="icon"><i class="bx bxl-github"></i></div></a>
-          <h4 class="title"><a style="color:#12d640;" href="https://resume.github.io/?mertmcd" target="_blank">GitHub Résumé</a></h4>
-          <p class="description" style="color:#fff;">The above link contains my résumé based on my GitHub repos/activity. Also, you can check out the code for this résumé <a href="https://github.com/resume/resume.github.com" target="_blank">here</a>.</p>
+          <h4 class="title"><a style="" href="https://resume.github.io/?mertmcd" target="_blank">GitHub Résumé</a></h4>
+          <p class="description" style="">The above link contains my résumé based on my GitHub repos/activity. Also, you can check out the code for this résumé <a href="https://github.com/resume/resume.github.com" target="_blank">here</a>.</p>
         </div>
       </div>
     </div>
@@ -623,7 +631,7 @@
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-share-alt"></i>
-            <h3 style="color:#12d640;">Social Profiles</h3>
+            <h3 style="">Social Profiles</h3>
             <div class="social-links">
               <a href="mailto:merttdem@gmail.com" target="_blank" class="gmail"><i class="bx bxl-google"></i></a>
               <a href="https://www.linkedin.com/in/mertmcd" target="_blank" class="linkedin"><i class="bx bxl-linkedin"></i></a>
@@ -634,7 +642,7 @@
         <div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
           <div class="info-box">
             <i class="bx bx-envelope"></i>
-            <h3 style="color:#12d640;">Email</h3>
+            <h3 style="">Email</h3>
             <a href="mailto:merttdem@gmail.com" target="_blank"> <p><i class="icofont-rounded-right"></i> merttdem@gmail.com</p> </a>
           </div>
         </div>
