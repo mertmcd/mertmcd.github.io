@@ -10,22 +10,22 @@
 --------------------------------------------------------------*/
 
 :root {
-    /* Light Mode Variables */
-    --primary-color: #005b96;
-    --secondary-color: #03396c;
-    --tertiary-color: #011f4b;
+  /* Light Mode Variables */
+  --primary-color: #005b96;
+  --secondary-color: #03396c;
+  --tertiary-color: #011f4b;
 
-    --header-color: #1b1b1b;
-    --header-top-color: #fff9ec;
-    --background-color: #ffffff;
-    --text-color: #212121;
-    --icon-box: #f1f1f1;
-    --icon-box-hover: #e0e0e0;
-    --contact-box: #cccccc;
-    --switcher-color: #f1f1f1;
-    --switch-button: #005b96;
-    --const-white: #ffffff;
-    --const-black: #000000;
+  --header-color: #1b1b1b;
+  --header-top-color: #fff9ec;
+  --background-color: #ffffff;
+  --text-color: #212121;
+  --icon-box: #f1f1f1;
+  --icon-box-hover: #e0e0e0;
+  --contact-box: #cccccc;
+  --switcher-color: #f1f1f1;
+  --switch-button: #005b96;
+  --const-white: #ffffff;
+  --const-black: #000000;
 }
 
 body.dark-mode {
