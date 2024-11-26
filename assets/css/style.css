@@ -23,6 +23,7 @@
     --icon-box-hover: #e0e0e0;
     --contact-box: #cccccc;
     --switcher-color: #f1f1f1;
+    --switch-button: #005b96;
     --const-white: #ffffff;
     --const-black: #000000;
 }
@@ -36,10 +37,12 @@ body.dark-mode {
   --header-top-color: #1b1b1b;
   --background-color: #212121;
   --text-color: #ffffff;
-  --icon-box: #1c1c1c;
+  --icon-box: #323232;
   --icon-box-hover: #2f2f2f;
   --contact-box: #444444;
   --switcher-color: #050505;
+  --switch-button: #a80000;
+
   --const-white: #ffffff;
   --const-black: #000000;
 }
@@ -91,6 +94,11 @@ img {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Raleway", sans-serif;
+}
+
+h1.naming-container{
+  display: flex;
+  flex-direction: row;
 }
 
 .background-image {
@@ -381,7 +389,7 @@ svg {
   align-items: center;
   justify-content: flex-start;
   position: relative;
-  margin: 0rem 0.5rem;
+  margin: 0rem 4rem;
 }
 
 #theme-toggle {
@@ -391,7 +399,7 @@ svg {
 .toggle-label {
   width: 60px;
   height: 30px;
-  background-color: var(--tertiary-color);
+  background-color: var(--switch-button);
   border-radius: 15px;
   position: relative;
   cursor: pointer;
@@ -418,8 +426,8 @@ svg {
   transform: translate(30px, -50%);
 }
 
-.toggle-label .sun,
-.toggle-label .moon {
+.toggle-label .luke,
+.toggle-label .darth {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
@@ -428,21 +436,59 @@ svg {
   pointer-events: none;
 }
 
-.toggle-label .sun {
-  left: 8px;
+.toggle-label .luke {
+  left: -50px;
   opacity: 1;
 }
 
-.toggle-label .moon {
-  right: 8px;
+.toggle-label .luke svg {
+  fill: var(--primary-color);
+}
+
+.toggle-label .darth {
+  right: -50px;
   opacity: 0;
 }
 
-#theme-toggle:checked + .toggle-label .sun {
+@media screen and (max-width: 768px) {
+
+  #header h1 a {
+    padding-right: 1rem;
+  }
+
+  .theme-switch {
+    margin: 0rem 2rem;
+  }
+
+  .toggle-label .luke {
+    left: -35px;
+  }
+
+  .toggle-label .darth {
+    right: -35px;
+  }
+
+  .toggle-label .luke svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .toggle-label .darth svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .services .icon-box {
+    margin: 1rem auto;
+  }
+  
+}
+
+#theme-toggle:checked + .toggle-label .luke {
   opacity: 0;
 }
 
-#theme-toggle:checked + .toggle-label .moon {
+#theme-toggle:checked + .toggle-label .darth {
   opacity: 1;
 }
 
@@ -469,7 +515,7 @@ section.section-show {
 
 section .container {
   background: rgba(0, 0, 0, 0);
-  padding: 0.5rem;
+  padding: 0rem 1.5rem;
 }
 
 @media (max-width: 768px) {
@@ -799,7 +845,7 @@ section .container {
   text-align: center;
   background: var(--icon-box);
   padding: 1rem;
-  margin: 0.5rem 0rem;
+  margin: 1rem;
   transition: all ease-in-out 0.3s;
   border-radius: 8px;
 }
@@ -1030,6 +1076,7 @@ section .container {
   padding: 20px;
   width: 100%;
   background: var(--icon-box);
+  border-radius: 8px;
 }
 
 .contact .info-box i.bx {
@@ -1071,7 +1118,7 @@ section .container {
 }
 
 .contact .info-box .social-links a {
-  font-size: 18px;
+  font-size: 1rem;
   display: inline-block;
   color: var(--text-color);
   line-height: 1;
@@ -1083,16 +1130,17 @@ section .container {
 }
 
 .contact .php-email-form {
-  padding: 30px;
+  padding: 1rem;
   background: var(--icon-box);
+  border-radius: 8px;
 }
 
 .contact .php-email-form .validate {
   display: none;
   color: red;
-  margin: 0 0 15px 0;
+  margin: 0 0 1rem 0;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 0.875rem;
 }
 
 .contact .php-email-form .error-message {
@@ -1100,7 +1148,7 @@ section .container {
   background: rgba(255, 255, 255, 0.08);
   background: #ed3c0d;
   text-align: center;
-  padding: 15px;
+  padding: 1rem;
   font-weight: 600;
 }
 
@@ -1109,7 +1157,7 @@ section .container {
   background: rgba(255, 255, 255, 0.08);
   background: var(--primary-color);
   text-align: center;
-  padding: 15px;
+  padding: 1rem;
   font-weight: 600;
 }
 
@@ -1124,8 +1172,8 @@ section .container {
   content: "";
   display: inline-block;
   border-radius: 50%;
-  width: 24px;
-  height: 24px;
+  width: 1.5rem;
+  height: 1.5rem;
   margin: 0 10px -6px 0;
   border: 3px solid var(--primary-color);
   border-top-color: #eee;
