@@ -437,7 +437,7 @@ svg {
 }
 
 .toggle-label .luke {
-  left: -50px;
+  left: -40px;
   opacity: 1;
 }
 
@@ -446,7 +446,7 @@ svg {
 }
 
 .toggle-label .darth {
-  right: -50px;
+  right: -40px;
   opacity: 0.1;
 }
 
@@ -465,6 +465,20 @@ svg {
     margin: 0rem 2rem;
   }
 
+  .toggle-label {
+    width: 50px;
+    height: 25px;
+  }
+
+  .toggle-label::before {
+    width: 20px;
+    height: 20px;
+  }
+
+  #theme-toggle:checked + .toggle-label::before {
+    transform: translate(25px, -50%);
+  }
+
   .toggle-label .luke {
     left: -35px;
   }
@@ -474,13 +488,13 @@ svg {
   }
 
   .toggle-label .luke svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
 
   .toggle-label .darth svg {
-    width: 32px;
-    height: 32px;
+    width: 28px;
+    height: 28px;
   }
   
 }
