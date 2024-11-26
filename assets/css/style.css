@@ -261,8 +261,8 @@ svg {
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: .5rem;
-  top: .5rem;
+  right: .25rem;
+  top: .7rem;
   z-index: 9998;
   border: 0;
   background: none;
@@ -458,7 +458,7 @@ svg {
 
   #header h1 a {
     padding-right: 1rem;
-    font-size: 30px;
+    font-size: 24px;
   }
 
   .theme-switch {
