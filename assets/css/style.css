@@ -447,7 +447,7 @@ svg {
 
 .toggle-label .darth {
   right: -50px;
-  opacity: 0;
+  opacity: 0.1;
 }
 
 @media screen and (max-width: 768px) {
@@ -485,7 +485,7 @@ svg {
 }
 
 #theme-toggle:checked + .toggle-label .luke {
-  opacity: 0;
+  opacity: 0.25;
 }
 
 #theme-toggle:checked + .toggle-label .darth {
