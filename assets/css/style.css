@@ -452,8 +452,13 @@ svg {
 
 @media screen and (max-width: 768px) {
 
+  #backgroundVideo {
+    display: none;
+  }
+
   #header h1 a {
     padding-right: 1rem;
+    font-size: 30px;
   }
 
   .theme-switch {
@@ -476,10 +481,6 @@ svg {
   .toggle-label .darth svg {
     width: 32px;
     height: 32px;
-  }
-
-  .services .icon-box {
-    margin: 1rem auto;
   }
   
 }
@@ -848,6 +849,12 @@ section .container {
   margin: 1rem;
   transition: all ease-in-out 0.3s;
   border-radius: 8px;
+}
+
+@media screen and (max-width: 768px) {
+  .services .icon-box {
+    margin: 1rem auto;
+  }
 }
 
 .services .icon-box .icon {
