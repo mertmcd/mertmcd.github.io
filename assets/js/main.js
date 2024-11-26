@@ -127,44 +127,74 @@
 
   // Porfolio isotope and filter
   $(window).on('load', function () {
+
+    // email JS init
+    emailjs.init("ND9W1vRjSmlAuOcea");
+
+    document.getElementById('contactForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var formData = {
+        name: document.getElementById('name').value,
+        email: document.getElementById('email').value,
+        subject: document.getElementById('subject').value,
+        message: document.getElementById('message').value,
+      };
+
+      document.querySelector('.loading').style.display = 'block';
+
+      document.querySelector('.sent-message').style.display = 'none';
+      document.querySelector('.error-message').style.display = 'none';
+
+      emailjs.send('service_bsl6lao', 'template_ys318bk', formData)
+        .then(function (response) {
+          document.querySelector('.sent-message').style.display = 'block';
+          document.querySelector('.loading').style.display = 'none';
+        }, function (error) {
+          document.querySelector('.error-message').style.display = 'block';
+          document.querySelector('.loading').style.display = 'none';
+        });
+    });
+
+
     var portfolioIsotope = $('.portfolio-container').isotope({
       itemSelector: '.portfolio-item',
       layoutMode: 'fitRows'
     });
 
-      // Select all the coursework toggle buttons
-  const toggleButtons = document.querySelectorAll('.coursework-btn');
-  const experienceButtons = document.querySelectorAll('.experience-btn');
-  
-  toggleButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      // Toggle the parent div's active class to show/hide the coursework
-      const parentDiv = button.closest('.coursework-toggle');
-      parentDiv.classList.toggle('active');
-      
-      // Toggle the button text
-      if (parentDiv.classList.contains('active')) {
-        button.textContent = 'Hide Coursework';
-      } else {
-        button.textContent = 'Show Coursework';
-      }
-    });
-  });
+    // Select all the coursework toggle buttons
+    const toggleButtons = document.querySelectorAll('.coursework-btn');
+    const experienceButtons = document.querySelectorAll('.experience-btn');
 
-  experienceButtons.forEach(function(button) {
-    button.addEventListener('click', function() {
-      // Toggle the parent div's active class to show/hide the coursework
-      const parentDiv = button.closest('.experience-toggle');
-      parentDiv.classList.toggle('active');
-      
-      // Toggle the button text
-      if (parentDiv.classList.contains('active')) {
-        button.textContent = 'Hide Experience';
-      } else {
-        button.textContent = 'Show Experience';
-      }
+    toggleButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        // Toggle the parent div's active class to show/hide the coursework
+        const parentDiv = button.closest('.coursework-toggle');
+        parentDiv.classList.toggle('active');
+
+        // Toggle the button text
+        if (parentDiv.classList.contains('active')) {
+          button.textContent = 'Hide Coursework';
+        } else {
+          button.textContent = 'Show Coursework';
+        }
+      });
     });
-  });
+
+    experienceButtons.forEach(function (button) {
+      button.addEventListener('click', function () {
+        // Toggle the parent div's active class to show/hide the coursework
+        const parentDiv = button.closest('.experience-toggle');
+        parentDiv.classList.toggle('active');
+
+        // Toggle the button text
+        if (parentDiv.classList.contains('active')) {
+          button.textContent = 'Hide Experience';
+        } else {
+          button.textContent = 'Show Experience';
+        }
+      });
+    });
 
     $('#portfolio-flters li').on('click', function () {
       $("#portfolio-flters li").removeClass('filter-active');
