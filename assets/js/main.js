@@ -142,31 +142,28 @@
     });
 
     const themeToggle = document.querySelector("#theme-toggle");
-    const backgroundVideo = document.getElementById('backgroundVideo');
+    const backgroundImg = document.getElementById('backgroundImage');
 
     const savedTheme = localStorage.getItem("theme") || "light";
 
     if (savedTheme === "dark") {
       document.body.classList.add("dark-mode");
       themeToggle.checked = true;
-      backgroundVideo.src = "assets/img/background/bgvideo.mp4";
+      backgroundImg.src = "assets/img/background/bgdark.jpg";
     } else {
-      backgroundVideo.src = "assets/img/background/bgvideo2.mp4";
+      backgroundImg.src = "assets/img/background/bgwhite.jpg";
     }
 
     themeToggle.addEventListener("change", () => {
       if (themeToggle.checked) {
         document.body.classList.add("dark-mode");
         localStorage.setItem("theme", "dark");
-        backgroundVideo.src = "assets/img/background/bgvideo.mp4";
+        backgroundImg.src = "assets/img/background/bgdark.jpg";
       } else {
         document.body.classList.remove("dark-mode");
         localStorage.setItem("theme", "light");
-        backgroundVideo.src = "assets/img/background/bgvideo2.mp4";
+        backgroundImg.src = "assets/img/background/bgwhite.jpg";
       }
-
-      backgroundVideo.load();
-      backgroundVideo.play();
     });
 
   });

@@ -447,7 +447,7 @@ svg {
 
 .toggle-label .darth {
   right: -40px;
-  opacity: 0.1;
+  opacity: 0.2;
 }
 
 @media screen and (max-width: 768px) {
