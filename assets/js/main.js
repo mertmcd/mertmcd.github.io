@@ -132,6 +132,40 @@
       layoutMode: 'fitRows'
     });
 
+      // Select all the coursework toggle buttons
+  const toggleButtons = document.querySelectorAll('.coursework-btn');
+  const experienceButtons = document.querySelectorAll('.experience-btn');
+  
+  toggleButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Toggle the parent div's active class to show/hide the coursework
+      const parentDiv = button.closest('.coursework-toggle');
+      parentDiv.classList.toggle('active');
+      
+      // Toggle the button text
+      if (parentDiv.classList.contains('active')) {
+        button.textContent = 'Hide Coursework';
+      } else {
+        button.textContent = 'Show Coursework';
+      }
+    });
+  });
+
+  experienceButtons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Toggle the parent div's active class to show/hide the coursework
+      const parentDiv = button.closest('.experience-toggle');
+      parentDiv.classList.toggle('active');
+      
+      // Toggle the button text
+      if (parentDiv.classList.contains('active')) {
+        button.textContent = 'Hide Experience';
+      } else {
+        button.textContent = 'Show Experience';
+      }
+    });
+  });
+
     $('#portfolio-flters li').on('click', function () {
       $("#portfolio-flters li").removeClass('filter-active');
       $(this).addClass('filter-active');

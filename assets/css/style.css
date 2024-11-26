@@ -275,7 +275,7 @@ svg {
 }
 
 .mobile-nav-toggle i {
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 .mobile-nav {
@@ -339,7 +339,7 @@ svg {
 }
 
 .mobile-nav-active .mobile-nav-toggle i {
-  color: var(--text-color);
+  color: var(--primary-color);
 }
 
 /* Header Top */
@@ -542,6 +542,138 @@ section .container {
   }
 }
 
+#education, #experience {
+  background: var(--background-color);
+}
+
+#education .school-logo, #experience .company-logo {
+  display: flex;
+  margin: 0.5rem 0rem;
+}
+
+#education .school-name, #experience .company-name {
+  text-align: left;
+  margin: 0.5rem 0rem;
+
+}
+
+#education .departmant-name, #experience .position-name {
+  text-align: left;
+  margin: 0.5rem 0rem;
+
+}
+
+#education .education-dates, #experience .experience-dates {
+  text-align: left;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0rem;
+
+}
+
+#education .education-dates .left, #experience .experience-dates .left {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--secondary-color);
+}
+
+#education .education-dates .right, #experience .experience-dates .right {
+  font-size: 1rem;
+  color: var(--secondary-color);
+  font-weight: 500;
+}
+
+#education .thesis {
+  margin-top: 1rem;
+  text-align: left;
+}
+
+#education .courses-title, #experience .experience-title {
+  text-align: left;
+  display: block;
+}
+
+
+/* Styling for the coursework toggle button */
+
+.coursework-toggle, .experience-toggle {
+  margin-top: 10px;
+  text-align: left;
+}
+
+.coursework-btn, .experience-btn {
+  background-color: var(--primary-color);
+  color: var(--const-white  );
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  text-align: left;
+  border-radius: 5px;
+  font-size: 16px;
+  width: auto;
+}
+
+.coursework-btn:hover, .experience-btn:hover {
+  background-color: var(--secondary-color);
+}
+
+/* Initially hide the coursework list */
+.coursework-list, .experience-list {
+  list-style-type: none;
+  padding-left: 0;
+  display: none;
+  margin-top: 10px;
+}
+
+.coursework-list li, .experience-list li {
+  padding-left: 1em;
+  position: relative;
+  font-weight: 600;
+  color: var(--tertiary-color);
+}
+
+.coursework-list li::before, .experience-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--secondary-color);
+}
+
+/* Show the coursework list when expanded */
+.coursework-toggle.active .coursework-list, .experience-toggle.active .experience-list {
+  display: block;
+}
+
+.coursework-toggle.active .coursework-btn, .experience-toggle.active .experience-btn {
+  background-color: var(--tertiary-color);
+  color: var(--const-white);
+}
+
+.coursework-toggle.active .coursework-btn:hover, .experience-toggle.active .experience-btn:hover {
+  background-color: var(--tertiary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .icon-box {
+    padding: 10px;
+  }
+
+  .icon-box img {
+    width: 70px;
+  }
+
+  .education-dates .left, .education-dates .right {
+    font-size: 14px;
+  }
+
+  .experience-dates .left, .experience-dates .right {
+    font-size: 14px;
+  }
+
+}
+
 .section-title h2 {
   font-size: 1rem;
   font-weight: 500;
@@ -571,6 +703,17 @@ section .container {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: var(--text-color);
+}
+
+/* Projects */
+
+#projects.services .icon-box {
+max-width: 15rem;
+}
+
+.project-title {
+  text-align: center;
+  margin: 1rem 0rem;
 }
 
 /*--------------------------------------------------------------
