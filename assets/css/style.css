@@ -11,39 +11,37 @@
 
 :root {
     /* Light Mode Variables */
-    --primary-color: #c80000;
-    --header-color: #1b1b1b;
-    --header-top-color: #fff9ec; /* Header için daha açık ton */
-    --primary-hover-color: #a00000; /* Uyumluluk için aynı bırakıldı */
-    --underline-color: #c80000;
-    --background-color: #ffffff; /* Light mod için beyaz arka plan */
-    --highlight-color: #a00000;
-    --text-color: #212121; /* Koyu metin rengi */
-    --icon-box: #f1f1f1; /* Hafif gri ikon kutuları */
-    --icon-box-hover: #e0e0e0; /* Hover durumu için biraz daha koyu */
-    --contact-box: #cccccc; /* Contact box için daha açık bir gri */
-    --social-links: #c80000;
-    --switcher-color: #fff;
-    --switcher-bg: #f1f1f1;
+    --primary-color: #005b96;
+    --secondary-color: #03396c;
+    --tertiary-color: #011f4b;
 
+    --header-color: #1b1b1b;
+    --header-top-color: #fff9ec;
+    --background-color: #ffffff;
+    --text-color: #212121;
+    --icon-box: #f1f1f1;
+    --icon-box-hover: #e0e0e0;
+    --contact-box: #cccccc;
+    --switcher-color: #f1f1f1;
+    --const-white: #ffffff;
+    --const-black: #000000;
 }
 
 body.dark-mode {
-  --primary-color: #ffc107;
+  --primary-color: #ffa500;
+  --secondary-color: #cc8400;
+  --tertiary-color: #9a6226;
+
   --header-color: #dee2e6;
   --header-top-color: #1b1b1b;
-  --primary-hover-color: #dca500;
-  --underline-color: #ffc107;
   --background-color: #212121;
-  --highlight-color: #dca500;
-  --text-color: #fff;
+  --text-color: #ffffff;
   --icon-box: #1c1c1c;
   --icon-box-hover: #2f2f2f;
   --contact-box: #444444;
-  --social-links: #665626;
-  --switcher-color: #000;
-  --switcher-bg: #8a6708;
-
+  --switcher-color: #050505;
+  --const-white: #ffffff;
+  --const-black: #000000;
 }
 
 body {
@@ -71,11 +69,11 @@ body::before {
 }
 
 a {
-  color: var(--underline-color);
+  color: var(--primary-color);
 }
 
 a:hover {
-  color: var(--primary-hover-color);
+  color: var(--secondary-color);
   text-decoration: none;
 }
 
@@ -139,7 +137,8 @@ svg {
 #header h1 a, #header h1 a:hover {
   color: var(--header-color);
   line-height: 1;
-  display: inline-block;
+  display: flex;
+  align-items: center;
 }
 
 #header h2 {
@@ -149,8 +148,8 @@ svg {
 }
 
 #header h2 span {
-  color: var(--underline-color);
-  border-bottom: 2px solid var(--underline-color);
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
   padding-bottom: 6px;
 }
 
@@ -169,8 +168,8 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--social-links);
-  color: var(--text-color);
+  background: var(--primary-color);
+  color: var(--const-white);
   line-height: 1;
   margin-right: 8px;
   border-radius: 50%;
@@ -179,7 +178,7 @@ svg {
 }
 
 #header .social-links a:hover {
-  background: var(--primary-color);
+  background: var(--tertiary-color);
 }
 
 @media (max-width: 992px) {
@@ -235,7 +234,7 @@ svg {
   height: 2px;
   bottom: -4px;
   left: 0;
-  background-color: var(--underline-color);
+  background-color: var(--primary-color);
   visibility: hidden;
   width: 0px;
   transition: all 0.3s ease-in-out 0s;
@@ -247,19 +246,19 @@ svg {
 }
 
 .nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
-  color: var(--underline-color);
+  color: var(--primary-color);
   text-decoration: none;
 }
 
 /* Mobile Navigation */
 .mobile-nav-toggle {
   position: fixed;
-  right: 15px;
-  top: 15px;
+  right: .5rem;
+  top: .5rem;
   z-index: 9998;
   border: 0;
   background: none;
-  font-size: 24px;
+  font-size: 1.5rem;
   transition: all 0.4s;
   outline: none !important;
   line-height: 1;
@@ -279,7 +278,7 @@ svg {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: rgba(0, 0, 0, 0.7);
+  background: var(--contact-box);
   transition: ease-in-out 0s;
   opacity: 0;
   visibility: hidden;
@@ -297,7 +296,7 @@ svg {
 .mobile-nav a {
   display: block;
   position: relative;
-  color: var(--text-color);
+  color: var(--primary-color);
   padding: 10px 20px;
   font-weight: 500;
   outline: none;
@@ -306,6 +305,7 @@ svg {
 .mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
   color: var(--primary-color);
   text-decoration: none;
+  font-weight: 900;
 }
 
 .mobile-nav-overly {
@@ -336,7 +336,7 @@ svg {
 
 /* Header Top */
 #header.header-top {
-  height: 90px;
+  height: 4rem;
   position: fixed;
   left: 0;
   top: 0;
@@ -350,7 +350,8 @@ svg {
 
 #header.header-top h1 {
   margin-right: auto;
-  font-size: 36px;
+  font-size: 1.5rem;
+  margin-bottom: 0;
 }
 
 #header.header-top .container {
@@ -364,10 +365,10 @@ svg {
 
 @media (max-width: 768px) {
   #header.header-top {
-    height: 60px;
+    height: 3rem;
   }
   #header.header-top h1 {
-    font-size: 26px;
+    font-size: 1.5rem;
   }
 }
 
@@ -380,21 +381,23 @@ svg {
   align-items: center;
   justify-content: flex-start;
   position: relative;
+  margin: 0rem 0.5rem;
 }
 
 #theme-toggle {
-  display: none; /* Gizle ana input */
+  display: none;
 }
 
 .toggle-label {
   width: 60px;
   height: 30px;
-  background-color: var(--switcher-bg);
+  background-color: var(--tertiary-color);
   border-radius: 15px;
   position: relative;
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s ease-in-out;
+  margin-bottom: 0;
 }
 
 .toggle-label::before {
@@ -412,7 +415,7 @@ svg {
 }
 
 #theme-toggle:checked + .toggle-label::before {
-  transform: translate(30px, -50%); /* Sağ tarafa kaydır */
+  transform: translate(30px, -50%);
 }
 
 .toggle-label .sun,
@@ -466,7 +469,7 @@ section.section-show {
 
 section .container {
   background: rgba(0, 0, 0, 0);
-  padding: 30px;
+  padding: 0.5rem;
 }
 
 @media (max-width: 768px) {
@@ -479,14 +482,14 @@ section .container {
 }
 
 .section-title h2 {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 500;
   padding: 0;
   line-height: 1px;
   margin: 1rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--underline-color);
+  color: var(--primary-color);
   font-family: "Poppins", sans-serif;
 }
 
@@ -515,7 +518,7 @@ section .container {
 .about-me .content h3 {
   font-weight: 700;
   font-size: 26px;
-  color: var(--highlight-color);
+  color: var(--secondary-color);
 }
 
 .about-me .content ul {
@@ -530,7 +533,7 @@ section .container {
 .about-me .content ul i {
   font-size: 20px;
   padding-right: 2px;
-  color: var(--highlight-color);
+  color: var(--secondary-color);
 }
 
 .about-me .content p:last-child {
@@ -560,7 +563,7 @@ section .container {
   font-size: 24px;
   background: rgba(255, 255, 255, 0.1);
   padding: 12px;
-  color: var(--highlight-color);
+  color: var(--secondary-color);
   border-radius: 50px;
 }
 
@@ -610,7 +613,7 @@ section .container {
   width: 1px;
   height: 10px;
   transition: .9s;
-  background-color: var(--highlight-color);
+  background-color: var(--secondary-color);
 }
 
 /*--------------------------------------------------------------
@@ -719,7 +722,7 @@ section .container {
 }
 
 .testimonials .owl-dot.active {
-  background-color: var(--highlight-color) !important;
+  background-color: var(--secondary-color) !important;
 }
 
 @media (max-width: 767px) {
@@ -752,7 +755,7 @@ section .container {
   font-weight: 600;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
-  color: var(--highlight-color);
+  color: var(--secondary-color);
   margin-bottom: 10px;
 }
 
@@ -785,8 +788,8 @@ section .container {
   border-radius: 50px;
   left: -9px;
   top: 0;
-  background: var(--underline-color);
-  border: 2px solid var(--underline-color);
+  background: var(--primary-color);
+  border: 2px solid var(--primary-color);
 }
 
 /*--------------------------------------------------------------
@@ -795,9 +798,9 @@ section .container {
 .services .icon-box {
   text-align: center;
   background: var(--icon-box);
-  padding: 40px 40px;
+  padding: 1rem;
+  margin: 0.5rem 0rem;
   transition: all ease-in-out 0.3s;
-  margin: 10px;
   border-radius: 8px;
 }
 
@@ -805,7 +808,7 @@ section .container {
   margin: 0 auto;
   width: 64px;
   height: 64px;
-  background: var(--highlight-color);
+  background: var(--const-white);
   border-radius: 5px;
   transition: all .3s ease-out 0s;
   display: flex;
@@ -816,7 +819,7 @@ section .container {
 }
 
 .services .icon-box .icon i {
-  color: var(--text-color);
+  color: var(--secondary-color);
   font-size: 28px;
 }
 
@@ -827,21 +830,21 @@ section .container {
   top: -8px;
   height: 100%;
   width: 100%;
-  background: rgb(235 201 0 / 15%);
-  border-radius: 5px;
+  background: var(--secondary-color);
+  border-radius: 6px;
   transition: all .3s ease-out 0s;
   transform: translateZ(-1px);
 }
 
 .services .icon-box h4 {
-  font-weight: 700;
-  margin-bottom: 15px;
-  font-size: 24px;
-  color: var(--underline-color);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: var(--primary-color);
 }
 
 .services .icon-box h4 a {
-  color: var(--underline-color);
+  color: var(--primary-color);
 }
 
 .services .icon-box p {
@@ -851,15 +854,15 @@ section .container {
 }
 
 .services .icon-box:hover .icon {
-  background: var(--text-color);
+  background: var(--secondary-color);
 }
 
 .services .icon-box:hover .icon i {
-  color: var(--primary-color);
+  color: var(--const-white);
 }
 
 .services .icon-box:hover .icon::before {
-  background: var(--highlight-color);
+  background: var(--const-white);
 }
 
 /*--------------------------------------------------------------
@@ -994,7 +997,7 @@ section .container {
 }
 
 .portfolio .portfolio-wrap .portfolio-links a:hover {
-  color: var(--primary-hover-color);
+  color: var(--secondary-color);
 }
 
 .portfolio .portfolio-wrap:hover::before {
@@ -1031,12 +1034,12 @@ section .container {
 
 .contact .info-box i.bx {
   font-size: 26px;
-  color: var(--text-color);
+  color: var(--primary-color);
   border-radius: 50%;
   padding: 12px;
   float: left;
   margin-right: 10px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--contact-box)
 }
 
 .contact .info-box img {
@@ -1058,12 +1061,12 @@ section .container {
   padding: 0;
   color: var(--text-color);
   line-height: 24px;
-  font-size: 14px;
+  font-size: 1rem;
   margin: 0 0 0 68px;
 }
 
 .contact .info-box .social-links {
-  margin: 5px 0 0 68px;
+  margin: 5px 0 0 4rem;
   display: flex;
 }
 
@@ -1133,39 +1136,35 @@ section .container {
 .contact .php-email-form input, .contact .php-email-form textarea {
   border-radius: 0;
   box-shadow: none;
-  font-size: 14px;
-  background: rgba(255, 255, 255, 0.08);
+  font-size: 0.875rem;
+  background: var(--contact-box);
   border: 0;
   transition: 0.3s;
   color: var(--text-color);
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  background-color: rgba(255, 255, 255, 0.11);
-}
-
 .contact .php-email-form input::-webkit-input-placeholder, .contact .php-email-form textarea::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--tertiary-color);
   opacity: 1;
 }
 
 .contact .php-email-form input::-moz-placeholder, .contact .php-email-form textarea::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--tertiary-color);
   opacity: 1;
 }
 
 .contact .php-email-form input:-ms-input-placeholder, .contact .php-email-form textarea:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--tertiary-color);
   opacity: 1;
 }
 
 .contact .php-email-form input::-ms-input-placeholder, .contact .php-email-form textarea::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--tertiary-color);
   opacity: 1;
 }
 
 .contact .php-email-form input::placeholder, .contact .php-email-form textarea::placeholder {
-  color: rgba(255, 255, 255, 0.3);
+  color: var(--tertiary-color);
   opacity: 1;
 }
 
@@ -1181,9 +1180,10 @@ section .container {
   background: var(--primary-color);
   border: 0;
   padding: 10px 30px;
-  color: var(--text-color);
+  color: var(--const-white);
   transition: 0.4s;
   border-radius: 4px;
+  font-weight: 500;
 }
 
 .contact .php-email-form button[type="submit"]:hover {
@@ -1221,7 +1221,7 @@ section .container {
 }
 
 .credits a {
-  color: var(--highlight-color);
+  color: var(--secondary-color);
   transition: 0.3s;
 }
 
