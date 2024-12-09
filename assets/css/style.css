@@ -631,6 +631,7 @@ section .container {
   position: relative;
   font-weight: 600;
   color: var(--tertiary-color);
+  list-style-type: none;
 }
 
 .coursework-list li::before, .experience-list li::before {
