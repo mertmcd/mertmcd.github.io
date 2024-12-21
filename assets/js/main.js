@@ -127,6 +127,7 @@
 
   // Porfolio isotope and filter
   $(window).on('load', function () {
+    
 
     // email JS init
     emailjs.init("ND9W1vRjSmlAuOcea");
