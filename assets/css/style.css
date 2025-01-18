@@ -92,11 +92,16 @@ img {
   -webkit-touch-callout: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Raleway", sans-serif;
 }
 
-h1.naming-container{
+h1.naming-container {
   display: flex;
   flex-direction: row;
 }
@@ -142,7 +147,8 @@ svg {
   font-family: "Poppins", sans-serif;
 }
 
-#header h1 a, #header h1 a:hover {
+#header h1 a,
+#header h1 a:hover {
   color: var(--header-color);
   line-height: 1;
   display: flex;
@@ -230,7 +236,7 @@ svg {
   display: block;
   position: relative;
   color: var(--text-color);
-  font-size: 19px;
+  font-size: 16px;
   font-family: "Poppins", sans-serif;
   font-weight: 400;
 }
@@ -248,12 +254,16 @@ svg {
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .active > a:before {
   visibility: visible;
   width: 100%;
 }
 
-.nav-menu a:hover, .nav-menu .active > a, .nav-menu li:hover > a {
+.nav-menu a:hover,
+.nav-menu .active > a,
+.nav-menu li:hover > a {
   color: var(--primary-color);
   text-decoration: none;
 }
@@ -262,7 +272,7 @@ svg {
 .mobile-nav-toggle {
   position: fixed;
   right: 0rem;
-  top: .5rem;
+  top: 0.5rem;
   z-index: 9998;
   border: 0;
   background: none;
@@ -310,7 +320,9 @@ svg {
   outline: none;
 }
 
-.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
+.mobile-nav a:hover,
+.mobile-nav .active > a,
+.mobile-nav li:hover > a {
   color: var(--primary-color);
   text-decoration: none;
   font-weight: 900;
@@ -352,13 +364,14 @@ svg {
   background: var(--header-top-color);
 }
 
-#header.header-top .social-links, #header.header-top h2 {
+#header.header-top .social-links,
+#header.header-top h2 {
   display: none;
 }
 
 #header.header-top h1 {
   margin-right: auto;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   margin-bottom: 0;
 }
 
@@ -451,14 +464,13 @@ svg {
 }
 
 @media screen and (max-width: 768px) {
-
   #backgroundVideo {
     display: none;
   }
 
   #header h1 a {
     padding-right: 1rem;
-    font-size: 24px;
+    font-size: 20px;
   }
 
   .theme-switch {
@@ -496,7 +508,6 @@ svg {
     width: 28px;
     height: 28px;
   }
-  
 }
 
 #theme-toggle:checked + .toggle-label .luke {
@@ -506,7 +517,6 @@ svg {
 #theme-toggle:checked + .toggle-label .darth {
   opacity: 1;
 }
-
 
 /*--------------------------------------------------------------
 # Sections General
@@ -542,43 +552,47 @@ section .container {
   }
 }
 
-#education, #experience {
+#education,
+#experience {
   background: var(--background-color);
 }
 
-#education .school-logo, #experience .company-logo {
+#education .school-logo,
+#experience .company-logo {
   display: flex;
   margin: 0.5rem 0rem;
 }
 
-#education .school-name, #experience .company-name {
+#education .school-name,
+#experience .company-name {
   text-align: left;
   margin: 0.5rem 0rem;
-
 }
 
-#education .departmant-name, #experience .position-name {
+#education .departmant-name,
+#experience .position-name {
   text-align: left;
   margin: 0.5rem 0rem;
-
 }
 
-#education .education-dates, #experience .experience-dates {
+#education .education-dates,
+#experience .experience-dates {
   text-align: left;
   margin-bottom: 1rem;
   display: flex;
   justify-content: space-between;
   margin: 0.5rem 0rem;
-
 }
 
-#education .education-dates .left, #experience .experience-dates .left {
+#education .education-dates .left,
+#experience .experience-dates .left {
   font-size: 1rem;
   font-weight: 700;
   color: var(--secondary-color);
 }
 
-#education .education-dates .right, #experience .experience-dates .right {
+#education .education-dates .right,
+#experience .experience-dates .right {
   font-size: 1rem;
   color: var(--secondary-color);
   font-weight: 500;
@@ -589,22 +603,24 @@ section .container {
   text-align: left;
 }
 
-#education .courses-title, #experience .experience-title {
+#education .courses-title,
+#experience .experience-title {
   text-align: left;
   display: block;
 }
 
-
 /* Styling for the coursework toggle button */
 
-.coursework-toggle, .experience-toggle {
+.coursework-toggle,
+.experience-toggle {
   margin-top: 10px;
   text-align: left;
 }
 
-.coursework-btn, .experience-btn {
+.coursework-btn,
+.experience-btn {
   background-color: var(--primary-color);
-  color: var(--const-white  );
+  color: var(--const-white);
   border: none;
   padding: 10px;
   cursor: pointer;
@@ -614,19 +630,22 @@ section .container {
   width: auto;
 }
 
-.coursework-btn:hover, .experience-btn:hover {
+.coursework-btn:hover,
+.experience-btn:hover {
   background-color: var(--secondary-color);
 }
 
 /* Initially hide the coursework list */
-.coursework-list, .experience-list {
+.coursework-list,
+.experience-list {
   list-style-type: none;
   padding-left: 0;
   display: none;
   margin-top: 10px;
 }
 
-.coursework-list li, .experience-list li {
+.coursework-list li,
+.experience-list li {
   padding-left: 1em;
   position: relative;
   font-weight: 600;
@@ -634,7 +653,8 @@ section .container {
   list-style-type: none;
 }
 
-.coursework-list li::before, .experience-list li::before {
+.coursework-list li::before,
+.experience-list li::before {
   content: "•";
   position: absolute;
   left: 0;
@@ -642,16 +662,19 @@ section .container {
 }
 
 /* Show the coursework list when expanded */
-.coursework-toggle.active .coursework-list, .experience-toggle.active .experience-list {
+.coursework-toggle.active .coursework-list,
+.experience-toggle.active .experience-list {
   display: block;
 }
 
-.coursework-toggle.active .coursework-btn, .experience-toggle.active .experience-btn {
+.coursework-toggle.active .coursework-btn,
+.experience-toggle.active .experience-btn {
   background-color: var(--tertiary-color);
   color: var(--const-white);
 }
 
-.coursework-toggle.active .coursework-btn:hover, .experience-toggle.active .experience-btn:hover {
+.coursework-toggle.active .coursework-btn:hover,
+.experience-toggle.active .experience-btn:hover {
   background-color: var(--tertiary-color);
 }
 
@@ -665,14 +688,15 @@ section .container {
     width: 70px;
   }
 
-  .education-dates .left, .education-dates .right {
+  .education-dates .left,
+  .education-dates .right {
     font-size: 14px;
   }
 
-  .experience-dates .left, .experience-dates .right {
+  .experience-dates .left,
+  .experience-dates .right {
     font-size: 14px;
   }
-
 }
 
 .section-title h2 {
@@ -709,7 +733,7 @@ section .container {
 /* Projects */
 
 #projects.services .icon-box {
-max-width: 15rem;
+  max-width: 15rem;
 }
 
 .project-title {
@@ -817,7 +841,7 @@ max-width: 15rem;
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: .9s;
+  transition: 0.9s;
   background-color: var(--secondary-color);
 }
 
@@ -832,7 +856,6 @@ max-width: 15rem;
   transition: ease-in-out 0.3s;
   border-radius: 8px;
 }
-
 
 .interests .icon-box i {
   font-size: 32px;
@@ -1021,7 +1044,7 @@ max-width: 15rem;
   height: 64px;
   background: var(--const-white);
   border-radius: 5px;
-  transition: all .3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1036,14 +1059,14 @@ max-width: 15rem;
 
 .services .icon-box .icon::before {
   position: absolute;
-  content: '';
+  content: "";
   left: -8px;
   top: -8px;
   height: 100%;
   width: 100%;
   background: var(--secondary-color);
   border-radius: 6px;
-  transition: all .3s ease-out 0s;
+  transition: all 0.3s ease-out 0s;
   transform: translateZ(-1px);
 }
 
@@ -1107,7 +1130,8 @@ max-width: 15rem;
   border-radius: 4px;
 }
 
-.portfolio #portfolio-flters li:hover, .portfolio #portfolio-flters li.filter-active {
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
   background: var(--primary-color);
 }
 
@@ -1187,7 +1211,7 @@ max-width: 15rem;
 }
 
 .portfolio .portfolio-wrap .portfolio-info p {
-  color: var(--text-color)fff;
+  color: var(--text-color) fff;
   font-size: 14px;
   text-transform: uppercase;
   padding: 0;
@@ -1251,7 +1275,7 @@ max-width: 15rem;
   padding: 12px;
   float: left;
   margin-right: 10px;
-  background: var(--contact-box)
+  background: var(--contact-box);
 }
 
 .contact .info-box img {
@@ -1307,50 +1331,55 @@ max-width: 15rem;
   font-weight: 400;
   font-size: 0.875rem;
 }
-  .contact .email-form .sent-message,
-  .contact .email-form .error-message {
-    display: none;
-    text-align: center;
-    padding: 1rem;
-    font-weight: 600;
-    border-radius: 4px;
-    margin-top: 1rem;
-  }
-  
-  .contact .email-form .sent-message {
-    background-color: #28a745; /* Green for success */
-    color: var(--const-white);
-  }
-  
-  .contact .email-form .error-message {
-    background-color: #dc3545; /* Red for error */
-    color: var(--const-white);
-  }
-  
-  .contact .email-form .loading {
-    display: none;
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .contact .email-form .loading:before {
-    content: "";
-    display: inline-block;
-    border-radius: 50%;
-    width: 1.5rem;
-    height: 1.5rem;
-    margin: 0 10px -6px 0;
-    border: 3px solid #28a745; /* Green for loading */
-    border-top-color: #eee;
-    animation: animate-loading 1s linear infinite;
-  }
-  
-  @keyframes animate-loading {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
+.contact .email-form .sent-message,
+.contact .email-form .error-message {
+  display: none;
+  text-align: center;
+  padding: 1rem;
+  font-weight: 600;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
 
-.contact .email-form input, .contact .email-form textarea {
+.contact .email-form .sent-message {
+  background-color: #28a745; /* Green for success */
+  color: var(--const-white);
+}
+
+.contact .email-form .error-message {
+  background-color: #dc3545; /* Red for error */
+  color: var(--const-white);
+}
+
+.contact .email-form .loading {
+  display: none;
+  text-align: center;
+  padding: 1rem;
+}
+
+.contact .email-form .loading:before {
+  content: "";
+  display: inline-block;
+  border-radius: 50%;
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: 0 10px -6px 0;
+  border: 3px solid #28a745; /* Green for loading */
+  border-top-color: #eee;
+  animation: animate-loading 1s linear infinite;
+}
+
+@keyframes animate-loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.contact .email-form input,
+.contact .email-form textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 0.875rem;
@@ -1361,27 +1390,32 @@ max-width: 15rem;
   color: var(--text-color);
 }
 
-.contact .email-form input::-webkit-input-placeholder, .contact .email-form textarea::-webkit-input-placeholder {
+.contact .email-form input::-webkit-input-placeholder,
+.contact .email-form textarea::-webkit-input-placeholder {
   color: var(--tertiary-color);
   opacity: 1;
 }
 
-.contact .email-form input::-moz-placeholder, .contact .email-form textarea::-moz-placeholder {
+.contact .email-form input::-moz-placeholder,
+.contact .email-form textarea::-moz-placeholder {
   color: var(--tertiary-color);
   opacity: 1;
 }
 
-.contact .email-form input:-ms-input-placeholder, .contact .email-form textarea:-ms-input-placeholder {
+.contact .email-form input:-ms-input-placeholder,
+.contact .email-form textarea:-ms-input-placeholder {
   color: var(--tertiary-color);
   opacity: 1;
 }
 
-.contact .email-form input::-ms-input-placeholder, .contact .email-form textarea::-ms-input-placeholder {
+.contact .email-form input::-ms-input-placeholder,
+.contact .email-form textarea::-ms-input-placeholder {
   color: var(--tertiary-color);
   opacity: 1;
 }
 
-.contact .email-form input::placeholder, .contact .email-form textarea::placeholder {
+.contact .email-form input::placeholder,
+.contact .email-form textarea::placeholder {
   color: var(--tertiary-color);
   opacity: 1;
 }
